@@ -1,1 +1,348 @@
-@AGENTS.md
+# Portfolio Project — Claude Instructions
+
+## Project goal
+
+This is the personal portfolio website for **Sothy Eng**, a final-year Data Science and Engineering student and Software Developer Intern.
+
+The portfolio must present Sothy as a credible backend, data engineering, and AI/computer-vision developer. It should feel premium, modern, technical, and personally distinctive.
+
+The primary audience is recruiters, hiring managers, and technical collaborators.
+
+## Design identity: “Khmer Noir Engineer”
+
+The portfolio must follow a **premium dark editorial developer-portfolio** direction with subtle traditional Khmer-inspired details.
+
+The intended feeling is:
+
+- Premium and luxurious
+- Clean and minimal
+- Modern and technical
+- Confident and knowledgeable
+- Culturally Cambodian, but subtle and elegant
+- Unique—not a generic developer template or admin dashboard
+
+Do not make the design feel like a SaaS dashboard, corporate template, portfolio template, or overly traditional Khmer website.
+
+## Non-negotiable design constraints
+
+### Color
+
+## Dark-mode color system
+
+- Page background: `#0A0A0B`
+- Surface/card background: `#111214`
+- Elevated surface: `#16181C`
+- Primary text: `#F2F2F0`
+- Secondary text: `#8A8F98`
+- Border: `#1F2126`
+- Accent: muted gold `#C9A227`
+- Accent hover: `#E3B93A`
+
+## Light-mode color system
+
+- Page background: `#F7F4EE`
+- Card background: `#FFFFFF`
+- Elevated surface: `#FDFBF7`
+- Primary text: `#141414`
+- Secondary text: `#5F6368`
+- Border: `#E3DFD6`
+- Accent: deep royal blue `#1F3A93`
+- Accent hover: `#16306F`
+- Optional secondary accent: muted gold `#B8860B`
+
+Rules:
+
+- Use **only one accent color**: muted gold.
+- Do not introduce additional bright accent colors unless the user explicitly requests them.
+- Use gold sparingly for meaningful emphasis: active links, selected project numbers, key headings, primary CTA hover, and subtle dividers.
+- Do not use large gold areas, bright gradients, neon colors, or rainbow accents.
+- Maintain sufficient contrast for accessibility.
+- Do not place low-contrast gray text on dark backgrounds for important information.
+
+### Typography
+
+Use a clear, modern type system:
+
+- Headings: Space Grotesk, Satoshi, or Clash Display
+- Body: Inter or Geist
+- Technical labels, tags, numbers, and small metadata: JetBrains Mono
+
+Rules:
+
+- Create strong visual hierarchy through size, weight, spacing, and contrast.
+- Hero headline must be visually dominant.
+- Section headings must be clearly larger than body text.
+- Use uppercase, letter-spaced monospace labels for section numbers and technical metadata.
+- Do not use more than two main font families plus one monospace font.
+- Do not use decorative, handwritten, or overly stylized fonts.
+
+### Spacing and layout
+
+- Use generous whitespace and a consistent spacing scale.
+- Desktop-first layout, but fully responsive on tablet and mobile.
+- Use a centered content container with consistent horizontal padding.
+- Maintain clear vertical rhythm between sections.
+- Avoid cramped sections, dense tables, and dashboard-like grids.
+- Use cards, lists, timelines, and visual summaries instead of tables wherever possible.
+- Keep navigation simple and predictable.
+
+### Khmer visual identity
+
+Use Khmer-inspired visual elements as a **subtle design system**, not as decoration everywhere.
+
+Allowed:
+
+- Thin Kbach-inspired geometric line patterns
+- Minimal corner motifs
+- Elegant section dividers
+- A small monogram or emblem beside the name
+- A very low-opacity background pattern in the hero and contact sections
+- A subtle gold ornamental divider between major sections
+
+Constraints:
+
+- Khmer patterns must be geometric, minimal, refined, and low-opacity.
+- Background patterns should be around 4–8% opacity.
+- Never place a pattern directly behind body text if it reduces readability.
+- Do not use temple photos, complex traditional artwork, religious symbols, or loud cultural patterns.
+- Khmer identity should enhance the design; it must not overpower the developer/engineering identity.
+
+## Required visual richness
+
+The site must not feel too simple or empty. Add depth through composition, hierarchy, texture, and interaction—not through extra colors or clutter.
+
+### Hero section
+
+The hero must be the strongest visual section.
+
+Required elements:
+
+- Small uppercase monospace label: `01 — BACKEND & DATA ENGINEERING`
+- Large editorial headline
+- Short supporting introduction
+- Primary CTA: `View Selected Work`
+- Secondary CTA: `Download CV`
+- Links to GitHub, LinkedIn, and Email
+- Subtle dark radial gradient or soft glow behind the headline
+- Very subtle Khmer-inspired geometric pattern
+- Thin gold divider or corner ornament
+- Optional status pill: `Open to opportunities`
+- Optional bottom technology strip: `Spring Boot · Kafka · PostgreSQL · Redis · FastAPI · Docker`
+
+Do not use a generic centered “Hello, I am a developer” layout.
+
+### Selected work
+
+The project section must feel premium and editorial.
+
+Rules:
+
+- Feature only 3–4 strong projects.
+- Make the strongest project a large featured project.
+- Show remaining projects as smaller but polished cards or rows.
+- Do not display all projects with identical visual weight.
+- Each project must include:
+  - Project number in monospace, such as `01 /`
+  - Project title
+  - One-line problem statement
+  - Short description
+  - Tech-stack tags
+  - Screenshot, UI preview, or architecture diagram
+  - `View case study →` link
+- Use real or realistic project visuals; do not use random stock images.
+- On hover: slightly zoom the image, lift the card, and highlight the border or project number with gold.
+
+### Project case studies
+
+Each major project needs a detailed case study.
+
+Required structure:
+
+1. Project title
+2. Short summary
+3. Problem
+4. My role and responsibilities
+5. System architecture
+6. Key technical decisions
+7. Challenges and solutions
+8. Results or impact
+9. Tech stack
+10. Screenshots, UI previews, or diagrams
+11. GitHub, live demo, or private-project note
+
+Rules:
+
+- Do not invent fake achievements, metrics, employers, clients, or project results.
+- If a metric is unavailable, describe the engineering outcome qualitatively.
+- If a project is private, state: `Private / internal project — detailed walkthrough available on request.`
+- Prefer architecture diagrams, sequence diagrams, and data-flow visuals over screenshots-only presentations.
+- Do not fill case studies with unnecessary screenshots.
+
+### Section headings
+
+Every major section must have a consistent editorial structure:
+
+```text
+02 — SELECTED WORK
+03 — EXPERIENCE
+04 — SKILLS
+05 — ABOUT
+06 — CONTACT
+```
+
+Rules:
+
+- Use monospace section numbers.
+- Use a small uppercase label above the section heading.
+- Use a large, clear section title.
+- Add a thin divider or subtle Khmer-inspired motif where appropriate.
+- Do not repeat the same heading style with no hierarchy.
+
+### Background and depth
+
+- Use layered dark surfaces rather than one flat background color.
+- Add subtle grain/noise texture at very low opacity if it improves the premium feeling.
+- Add soft radial gradients or subtle lighting behind major sections.
+- Use borders, spacing, shadows, and surface elevation to create depth.
+- Avoid heavy shadows, glassmorphism overload, neon glow, or excessive gradients.
+
+## Motion system
+
+The portfolio should feel alive, premium, and polished—but never flashy or distracting.
+
+Use purposeful motion to:
+- Guide attention to important content
+- Show which elements are interactive
+- Give feedback when the user hovers or clicks
+- Create a smooth transition between sections
+
+### Global motion rules
+- Use subtle, smooth, professional animations.
+- Use one consistent easing curve across the site.
+- Prefer `cubic-bezier(0.22, 1, 0.36, 1)` or `ease-out`.
+- Keep most interactions between 180–350ms.
+- Keep scroll reveals between 400–700ms.
+- Use small movement distances: 8–24px, not large slides.
+- Animate only `opacity` and `transform` where possible for performance.
+- Avoid animating `width`, `height`, `margin`, or `padding`.
+- Do not animate every element with the same delay; use subtle stagger.
+- Limit each section to one or two strong motion effects.
+- Do not use motion that delays access to content or makes reading harder.
+
+### Required animations
+
+1. Hero entrance
+- Animate the hero label, headline, description, buttons, and technology strip in sequence.
+- Use a subtle fade-up with 12–20px movement.
+- Stagger each element by 80–120ms.
+- The headline may use a line-by-line or word-by-word reveal, but it must remain readable and fast.
+
+2. Scroll reveal
+- Sections fade up when they enter the viewport.
+- Use 400–600ms duration and 12–24px upward movement.
+- Stagger project cards, skill groups, experience items, and contact elements slightly.
+- Trigger each animation only once; do not replay it every time the user scrolls back.
+
+3. Hover interactions
+- Buttons: slight lift, background fill, arrow movement, or border highlight.
+- Navigation links: animated underline that grows from left to right.
+- Project cards: 2–4px lift, subtle shadow, and image zoom from 1.0 to 1.03–1.05.
+- Project links: arrow moves slightly to the right.
+- Tech tags: slight lift and border/accent highlight.
+- Social icons: subtle scale or color transition.
+
+4. Section transitions
+- Add a thin divider line that draws horizontally when a section enters the viewport.
+- Animate section numbers or labels with a small fade/slide.
+- Do not use full-screen section transitions.
+
+5. Project case-study page
+- Animate the title, summary, architecture diagram, and content blocks with a subtle stagger.
+- Use image reveal or slight scale-in for visuals.
+- Keep navigation between projects smooth and fast.
+
+6. Contact section
+- Animate the large heading with a subtle reveal.
+- Animate contact buttons and social links with slight stagger.
+- If there is a form, animate field focus states and submit-button feedback.
+
+### Forbidden motion
+- Loading screens
+- Full-page preloader
+- Heavy parallax
+- Mouse-following cursor effects
+- 3D/WebGL effects
+- Particles
+- Auto-playing videos
+- Flashing or rapidly repeating animations
+- Excessive text scramble/decrypt effects
+- Animations that block scrolling or content access
+
+### Accessibility
+- Always respect `prefers-reduced-motion`.
+- When reduced motion is enabled, show content immediately without movement.
+- Do not use animations that can trigger motion sickness.
+- Ensure animations do not interfere with keyboard navigation or screen readers.
+
+### Performance
+- Use CSS transitions/animations or lightweight intersection-observer-based reveals.
+- Lazy-load below-the-fold images.
+- Avoid large animation libraries unless already necessary.
+- Ensure animations remain smooth on mobile.
+
+## Content constraints
+
+- Use clear, concise, professional English.
+- Do not use lorem ipsum in the final implementation.
+- Do not exaggerate experience, skills, or achievements.
+- Do not list every technology the user has ever encountered.
+- Show only technologies relevant to the presented projects and role.
+- Prefer evidence over claims: project context, architecture, contribution, and outcome.
+- Keep the personal story short and professional.
+- Do not include sensitive company information, private credentials, internal URLs, or confidential business details.
+
+## Engineering constraints
+
+- Use the existing project stack and structure; do not introduce a new framework unless explicitly requested.
+- Prefer React/Next.js, TypeScript, and Tailwind CSS if applicable.
+- Keep components reusable and avoid duplicated UI code.
+- Use semantic HTML and accessible components.
+- Add descriptive `alt` text for meaningful images.
+- Ensure keyboard navigation and visible focus states.
+- Optimize images and avoid large uncompressed assets.
+- Keep the site fast; avoid unnecessary client-side JavaScript.
+- Use responsive breakpoints consistently.
+- Do not break existing routes, content, or functionality when improving the UI.
+
+## Implementation workflow
+
+Before making large visual changes:
+
+1. Inspect the existing pages, components, styles, and content.
+2. Identify what specifically makes the current design feel simple.
+3. Propose a focused improvement plan.
+4. Ask for confirmation before replacing major layout structures or removing existing content.
+5. Implement changes incrementally.
+6. Verify responsiveness, accessibility, contrast, performance, and visual consistency.
+
+For every UI change:
+
+- Preserve the existing information architecture unless the user asks for a redesign.
+- Do not remove real project content, experience, links, or contact details.
+- Do not replace real content with placeholder text.
+- Do not add fake projects, fake metrics, or fake testimonials.
+- Do not make broad refactors when a focused visual improvement is enough.
+
+## Definition of done
+
+A UI change is complete only when:
+
+- The design still feels clean, premium, and minimal.
+- The Khmer identity is subtle and elegant.
+- The hero has a clear focal point.
+- Projects look like polished case studies, not basic repository cards.
+- Section hierarchy is obvious.
+- The site remains readable and accessible.
+- Mobile layout is usable and visually balanced.
+- No new bright colors, heavy animations, or cluttered components were added.
+- Existing functionality and real content are preserved.

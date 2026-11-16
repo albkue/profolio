@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { HiOutlineMail } from "react-icons/hi";
 import { SiGithub } from "react-icons/si";
 import Magnetic from "./Magnetic";
 import TextReveal from "./TextReveal";
@@ -148,13 +147,6 @@ export default function Hero() {
               className="p-2.5 -m-2.5 transition-all duration-300 hover:scale-110 hover:text-gold"
             >
               <SiGithub className="h-5 w-5" />
-            </a>
-            <a
-              href="mailto:sothyeng284@gmail.com"
-              aria-label="Email Eng Sothy"
-              className="p-2.5 -m-2.5 transition-all duration-300 hover:scale-110 hover:text-gold"
-            >
-              <HiOutlineMail className="h-6 w-6" />
             </a>
           </motion.div>
         </div>

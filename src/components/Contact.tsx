@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 import { SiGithub } from "react-icons/si";
 import Magnetic from "./Magnetic";
 import SectionHeading from "./SectionHeading";
@@ -20,7 +19,7 @@ export default function Contact() {
             "radial-gradient(ellipse at center, rgba(201,162,39,0.08) 0%, rgba(201,162,39,0.03) 40%, transparent 70%)",
         }}
       />
-      {/* Khmer geometric line pattern, fading upward (~6% opacity) */}
+      {/* Khmer geometric line pattern, fading upward */}
       <div
         aria-hidden
         className="absolute bottom-0 left-0 -z-10 h-[22rem] w-[min(36rem,100%)] [mask-image:linear-gradient(to_top,black,transparent)]"
@@ -34,38 +33,27 @@ export default function Contact() {
 
       <div className="mx-auto max-w-4xl px-6 py-20">
         <SectionHeading index="07" eyebrow="Contact" title="Contact" />
-        <div className="mt-8 flex flex-wrap gap-4">
-          <motion.div {...revealUp(0.05, 14)}>
-            <Magnetic>
-              <a
-                href="mailto:sothyeng284@gmail.com"
-                className="flex items-center gap-2 rounded-full border border-transparent bg-gold px-5 py-2.5 text-sm font-semibold text-gold-contrast transition-all hover:-translate-y-0.5 hover:bg-gold-hover"
-              >
-                <HiOutlineMail className="h-4 w-4" />
-                sothyeng284@gmail.com
-              </a>
-            </Magnetic>
-          </motion.div>
-          <motion.div {...revealUp(0.15, 14)}>
-            <Magnetic>
-              <a
-                href="https://github.com/albkue"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-gold/50 hover:text-gold"
-              >
-                <SiGithub className="h-4 w-4" />
-                github.com/albkue
-              </a>
-            </Magnetic>
-          </motion.div>
-          <motion.div {...revealUp(0.25, 14)}>
-            <span className="flex items-center gap-2 px-2 font-mono text-sm text-muted">
-              <HiOutlinePhone className="h-4 w-4" />
-              +855 10 635 568
-            </span>
-          </motion.div>
-        </div>
+        <motion.p
+          {...revealUp(0.05, 14)}
+          className="mt-8 max-w-xl text-base leading-7 text-muted"
+        >
+          The best way to reach me is through GitHub — for opportunities,
+          project walkthroughs, or collaborations, open an issue or find my
+          details on my profile.
+        </motion.p>
+        <motion.div {...revealUp(0.15, 14)} className="mt-6 flex flex-wrap gap-4">
+          <Magnetic>
+            <a
+              href="https://github.com/albkue"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-gold-contrast transition-all hover:-translate-y-0.5 hover:bg-gold-hover"
+            >
+              <SiGithub className="h-4 w-4" />
+              github.com/albkue
+            </a>
+          </Magnetic>
+        </motion.div>
 
         <GoldDivider className="mt-14" />
         <motion.p

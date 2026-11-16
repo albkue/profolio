@@ -23,7 +23,7 @@ export default function Contact() {
       {/* Khmer geometric line pattern, fading upward (~6% opacity) */}
       <div
         aria-hidden
-        className="absolute bottom-0 left-0 -z-10 h-[22rem] w-[36rem] opacity-[0.06] [mask-image:linear-gradient(to_top,black,transparent)]"
+        className="absolute bottom-0 left-0 -z-10 h-[22rem] w-[min(36rem,100%)] opacity-[0.06] [mask-image:linear-gradient(to_top,black,transparent)]"
       >
         <KbachPattern
           id="kbach-contact"

@@ -346,3 +346,131 @@ A UI change is complete only when:
 - Mobile layout is usable and visually balanced.
 - No new bright colors, heavy animations, or cluttered components were added.
 - Existing functionality and real content are preserved.
+
+## Responsive screen requirements
+
+The portfolio must look intentional, polished, and fully usable on every screen size.
+
+This is not “desktop-first with a mobile fallback.” Every layout must be designed to work across small phones, large phones, tablets, laptops, desktops, and ultra-wide screens.
+
+### Required screen coverage
+
+Test and optimize for:
+
+- Small mobile: 320px–375px
+- Standard mobile: 390px–430px
+- Large mobile: 430px–480px
+- Small tablet: 600px–768px
+- Tablet: 768px–1024px
+- Laptop: 1024px–1440px
+- Desktop: 1440px–1920px
+- Ultra-wide: 1920px+
+
+The site must remain usable and visually balanced from 320px to 2560px.
+
+### Layout rules
+
+- Use a mobile-first approach: create a clean single-column layout first, then enhance it for larger screens.
+- Use fluid layouts with relative units: `rem`, `%`, `clamp()`, `min()`, `max()`, and viewport-aware spacing.
+- Use CSS Grid and Flexbox for flexible layouts.
+- Avoid fixed pixel widths for major containers, images, text blocks, and sections.
+- Use `max-width` for readable content, but allow the container to shrink naturally on smaller screens.
+- Ensure no horizontal scrolling at any viewport width.
+- Ensure no content is cut off, overlapping, or overflowing outside its container.
+- Ensure text remains readable without zooming.
+- Ensure buttons, links, and interactive elements have a minimum touch target of 44x44px.
+- Ensure enough spacing between clickable elements on touch devices.
+- Do not hide important content on mobile unless it is truly redundant.
+- Do not use tiny text, cramped cards, or overly dense sections on mobile.
+
+### Typography rules
+
+- Use fluid typography with `clamp()` for headings and major text.
+- Hero headline must scale down gracefully on small screens.
+- Do not allow long words, URLs, project titles, or tech tags to overflow.
+- Use `overflow-wrap: break-word` or appropriate text wrapping where needed.
+- Maintain readable line length and line height on every screen.
+- Do not use extremely large fixed font sizes that break small screens.
+
+### Navigation rules
+
+- On mobile, use a clean hamburger menu, slide-in menu, or full-screen menu.
+- Ensure the menu is easy to open and close.
+- Ensure navigation links are large enough to tap.
+- Ensure the active page or section is clearly visible.
+- Keep the CV download and contact CTA accessible on mobile.
+- Do not use a cramped horizontal navigation bar on small screens.
+
+### Hero rules
+
+- On mobile, stack the hero content vertically.
+- Ensure the headline, description, CTAs, social links, and technology strip remain readable.
+- Ensure the Khmer-inspired background pattern does not interfere with text readability.
+- Do not use a fixed hero height that cuts off content on small screens.
+- Use `min-height` rather than fixed `height` where appropriate.
+- Ensure CTA buttons are full-width or comfortably large on small screens.
+
+### Project section rules
+
+- On mobile, display one project per row.
+- On tablet, use a suitable one- or two-column layout depending on content.
+- On desktop, use an intentional editorial layout with one featured project and supporting projects.
+- Ensure project screenshots and architecture diagrams scale correctly.
+- Use `aspect-ratio` for images to prevent layout shift.
+- Ensure project text does not overlap images.
+- Ensure “View case study” links are easy to tap.
+- Do not use hover-only information; ensure important project details are visible without hovering.
+
+### Images and media
+
+- Make all images responsive using `max-width: 100%` and appropriate height handling.
+- Use `aspect-ratio` to reserve space and prevent layout shift.
+- Use responsive image sizes or `srcset` where appropriate.
+- Lazy-load below-the-fold images.
+- Ensure architecture diagrams remain readable on mobile; provide a zoomable/full-screen view or a mobile-friendly alternative if needed.
+- Do not allow diagrams or screenshots to create horizontal scrolling.
+
+### Animation rules
+
+- Ensure animations work smoothly on mobile.
+- Disable or simplify nonessential motion on small screens if needed.
+- Respect `prefers-reduced-motion`.
+- Do not use hover-only interactions for essential information.
+- Ensure scroll animations do not cause layout shift or horizontal overflow.
+
+### Dark/light mode
+
+- Ensure the selected light mode remains readable and visually balanced on every screen.
+- Ensure cards, borders, text, and accent colors have sufficient contrast on mobile and desktop.
+- Ensure the Khmer-inspired patterns remain subtle on all screen sizes.
+
+### Quality checks
+
+Before considering a UI change complete, verify:
+
+1. 320px width
+2. 375px width
+3. 390px width
+4. 414px width
+5. 768px width
+6. 1024px width
+7. 1280px width
+8. 1440px width
+9. 1920px width
+10. 2560px width
+
+For each width, check:
+
+- No horizontal scrolling
+- No overlapping elements
+- No cut-off text or images
+- No cramped spacing
+- No broken navigation
+- No unreadable text
+- No oversized images
+- No layout shift
+- No inaccessible tap targets
+- No broken animations
+- No loss of important content
+
+Use browser developer tools, responsive design mode, and real-device testing where possible.

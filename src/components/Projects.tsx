@@ -3,7 +3,7 @@ import { SiGithub } from "react-icons/si";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import SpotlightCard from "./SpotlightCard";
-import PipelineDiagram from "./PipelineDiagram";
+import PipelineDiagram, { PipelineDiagramVertical } from "./PipelineDiagram";
 import { getTechIcon } from "@/lib/techIcons";
 
 type Project = {
@@ -90,7 +90,7 @@ function CaseStudyLink({ repo, inProgress }: { repo: string | null; inProgress?:
         href={repo}
         target="_blank"
         rel="noopener noreferrer"
-        className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-gold transition-colors hover:text-gold-hover"
+        className="group/link -mx-2 -my-3 inline-flex items-center gap-1.5 px-2 py-3 text-sm font-medium text-gold transition-colors hover:text-gold-hover"
       >
         View case study
         <span
@@ -119,7 +119,7 @@ function GitHubLink({ repo }: { repo: string | null }) {
       href={repo}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
+      className="-mx-2 -my-3 inline-flex items-center gap-1.5 px-2 py-3 text-sm text-muted transition-colors hover:text-foreground"
     >
       <SiGithub className="h-4 w-4" />
       Source
@@ -181,7 +181,12 @@ export default function Projects() {
             <CaseStudyLink repo={featured.repo} />
             <GitHubLink repo={featured.repo} />
           </div>
-          <div className="mt-8 overflow-x-auto rounded-2xl border border-hairline bg-background/60 p-4 transition-transform duration-300 group-hover:scale-[1.03] sm:p-6">
+          {/* Mobile: vertical stacked flow */}
+          <div className="mt-8 rounded-2xl border border-hairline bg-background/60 p-4 sm:hidden">
+            <PipelineDiagramVertical />
+          </div>
+          {/* ≥640px: horizontal pipeline */}
+          <div className="mt-8 hidden overflow-x-auto rounded-2xl border border-hairline bg-background/60 p-4 transition-transform duration-300 group-hover:scale-[1.03] sm:block sm:p-6">
             <PipelineDiagram />
           </div>
         </article>

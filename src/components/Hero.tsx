@@ -33,7 +33,7 @@ export default function Hero() {
       {/* Khmer geometric line pattern with a very slow vertical drift (~6% opacity) */}
       <div
         aria-hidden
-        className="absolute top-0 right-0 -z-10 h-[26rem] w-[42rem] opacity-[0.06] [mask-image:linear-gradient(to_bottom,black,transparent)]"
+        className="absolute top-0 right-0 -z-10 h-[26rem] w-[min(42rem,100%)] opacity-[0.06] [mask-image:linear-gradient(to_bottom,black,transparent)]"
       >
         <KbachPattern
           id="kbach-hero"
@@ -83,7 +83,7 @@ export default function Hero() {
         </motion.div>
 
         {/* 2 — headline (word-by-word reveal) */}
-        <h1 className="font-display text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+        <h1 className="text-[clamp(2.75rem,1.5rem+5.5vw,4.5rem)] font-display font-semibold tracking-tight text-foreground">
           <TextReveal text="Eng Sothy" delay={0.25} />
           <span aria-hidden className="text-gold">
             .
@@ -144,14 +144,14 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub profile"
-              className="transition-all duration-300 hover:scale-110 hover:text-gold"
+              className="p-2.5 -m-2.5 transition-all duration-300 hover:scale-110 hover:text-gold"
             >
               <SiGithub className="h-5 w-5" />
             </a>
             <a
               href="mailto:sothyeng284@gmail.com"
               aria-label="Email Eng Sothy"
-              className="transition-all duration-300 hover:scale-110 hover:text-gold"
+              className="p-2.5 -m-2.5 transition-all duration-300 hover:scale-110 hover:text-gold"
             >
               <HiOutlineMail className="h-6 w-6" />
             </a>

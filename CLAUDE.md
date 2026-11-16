@@ -25,9 +25,26 @@ Do not make the design feel like a SaaS dashboard, corporate template, portfolio
 
 ## Non-negotiable design constraints
 
-### Color
+### Color — dual theme
 
-## Dark-mode color system
+The site ships **two themes**, driven by semantic CSS variables defined in `src/app/globals.css`. Components must use tokens (`background`, `foreground`, `surface`, `elevated`, `muted`, `hairline`, `gold`, `gold-hover`, `gold-contrast`) — never raw hex values — so both themes stay in sync.
+
+- **Default theme: light.** Dark is the signature "Khmer Noir" look.
+- Switching is done via `data-theme` on `<html>` (see `ThemeToggle.tsx`); the user's choice persists in `localStorage` and is applied pre-paint in `layout.tsx`.
+
+#### Light mode (default) — "Khmer daylight"
+
+- Page background: `#FAF9F5`
+- Surface/card background: `#FFFFFF`
+- Elevated surface: `#F3F1E9`
+- Primary text: `#16181D`
+- Secondary text: `#5F646D`
+- Border: `#E5E1D6`
+- Accent: antique gold `#8A6D14`
+- Accent hover: `#6F570F`
+- Text on gold surfaces: `#FAF9F5` (via `--gold-contrast`)
+
+#### Dark mode (signature) — "Khmer Noir"
 
 - Page background: `#0A0A0B`
 - Surface/card background: `#111214`
@@ -37,27 +54,18 @@ Do not make the design feel like a SaaS dashboard, corporate template, portfolio
 - Border: `#1F2126`
 - Accent: muted gold `#C9A227`
 - Accent hover: `#E3B93A`
-
-## Light-mode color system
-
-- Page background: `#F7F4EE`
-- Card background: `#FFFFFF`
-- Elevated surface: `#FDFBF7`
-- Primary text: `#141414`
-- Secondary text: `#5F6368`
-- Border: `#E3DFD6`
-- Accent: deep royal blue `#1F3A93`
-- Accent hover: `#16306F`
-- Optional secondary accent: muted gold `#B8860B`
+- Text on gold surfaces: `#0A0A0B` (via `--gold-contrast`)
 
 Rules:
 
-- Use **only one accent color**: muted gold.
-- Do not introduce additional bright accent colors unless the user explicitly requests them.
+- Use **only one accent color per theme**: muted gold. Do not introduce additional accent colors (e.g. blue) unless the user explicitly requests them.
+- Both themes must express the same identity: warm paper + ink + gold in light; noir + gold in dark.
+- Buttons on gold backgrounds must use `text-gold-contrast`, never `text-background`.
+- Theme-aware effects (film grain, kbach pattern, hover shadows) read theme variables (`--grain-opacity`, `--pattern-opacity`, `--shadow-color`) — do not hardcode their intensity.
 - Use gold sparingly for meaningful emphasis: active links, selected project numbers, key headings, primary CTA hover, and subtle dividers.
 - Do not use large gold areas, bright gradients, neon colors, or rainbow accents.
-- Maintain sufficient contrast for accessibility.
-- Do not place low-contrast gray text on dark backgrounds for important information.
+- Maintain sufficient contrast for accessibility in **both** themes (≥4.5:1 for important text).
+- Do not place low-contrast gray text on dark backgrounds — or low-contrast text on light backgrounds — for important information.
 
 ### Typography
 

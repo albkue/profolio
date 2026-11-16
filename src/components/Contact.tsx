@@ -23,7 +23,8 @@ export default function Contact() {
       {/* Khmer geometric line pattern, fading upward (~6% opacity) */}
       <div
         aria-hidden
-        className="absolute bottom-0 left-0 -z-10 h-[22rem] w-[min(36rem,100%)] opacity-[0.06] [mask-image:linear-gradient(to_top,black,transparent)]"
+        className="absolute bottom-0 left-0 -z-10 h-[22rem] w-[min(36rem,100%)] [mask-image:linear-gradient(to_top,black,transparent)]"
+        style={{ opacity: "var(--pattern-opacity)" }}
       >
         <KbachPattern
           id="kbach-contact"
@@ -38,7 +39,7 @@ export default function Contact() {
             <Magnetic>
               <a
                 href="mailto:sothyeng284@gmail.com"
-                className="flex items-center gap-2 rounded-full border border-transparent bg-gold px-5 py-2.5 text-sm font-semibold text-background transition-all hover:-translate-y-0.5 hover:bg-gold-hover"
+                className="flex items-center gap-2 rounded-full border border-transparent bg-gold px-5 py-2.5 text-sm font-semibold text-gold-contrast transition-all hover:-translate-y-0.5 hover:bg-gold-hover"
               >
                 <HiOutlineMail className="h-4 w-4" />
                 sothyeng284@gmail.com

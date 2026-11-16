@@ -33,7 +33,8 @@ export default function Hero() {
       {/* Khmer geometric line pattern with a very slow vertical drift (~6% opacity) */}
       <div
         aria-hidden
-        className="absolute top-0 right-0 -z-10 h-[26rem] w-[min(42rem,100%)] opacity-[0.06] [mask-image:linear-gradient(to_bottom,black,transparent)]"
+        className="absolute top-0 right-0 -z-10 h-[26rem] w-[min(42rem,100%)] [mask-image:linear-gradient(to_bottom,black,transparent)]"
+        style={{ opacity: "var(--pattern-opacity)" }}
       >
         <KbachPattern
           id="kbach-hero"
@@ -114,7 +115,7 @@ export default function Hero() {
             <Magnetic>
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-2 rounded-full border border-transparent bg-gold px-6 py-2.5 text-sm font-semibold text-background shadow-[0_0_24px_rgba(201,162,39,0.15)] transition-all hover:-translate-y-0.5 hover:bg-gold-hover"
+                className="group inline-flex items-center gap-2 rounded-full border border-transparent bg-gold px-6 py-2.5 text-sm font-semibold text-gold-contrast shadow-[0_0_24px_rgba(201,162,39,0.15)] transition-all hover:-translate-y-0.5 hover:bg-gold-hover"
               >
                 View Selected Work
                 <span

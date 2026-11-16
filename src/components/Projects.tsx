@@ -148,7 +148,7 @@ export default function Projects() {
 
       {/* Featured project — large editorial case study */}
       <Reveal className="mt-10">
-        <article className="group rounded-3xl border border-hairline bg-surface p-6 transition-all duration-300 hover:border-gold/30 hover:shadow-[0_16px_48px_rgba(0,0,0,0.45)] sm:p-10">
+        <article className="group rounded-3xl border border-hairline bg-surface p-6 transition-all duration-300 hover:border-gold/30 hover:shadow-[0_16px_48px_var(--shadow-color)] sm:p-10">
           <div className="flex flex-wrap items-center gap-4">
             <ProjectNumber index="01" featured />
             <span className="font-mono text-xs tracking-[0.25em] text-muted uppercase">
@@ -196,7 +196,7 @@ export default function Projects() {
       <div className="mt-8 flex flex-col gap-6">
         {rest.map((project, i) => (
           <Reveal key={project.title} delay={(i + 1) * 0.08}>
-            <SpotlightCard className="group rounded-2xl border border-hairline bg-surface p-6 transition-all duration-300 hover:border-gold/40 hover:shadow-[0_12px_36px_rgba(0,0,0,0.4)] sm:p-8">
+            <SpotlightCard className="group rounded-2xl border border-hairline bg-surface p-6 transition-all duration-300 hover:border-gold/40 hover:shadow-[0_12px_36px_var(--shadow-color)] sm:p-8">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <div className="flex items-baseline gap-4">
                   <ProjectNumber index={`0${i + 2}`} />

@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { EASE } from "@/lib/motion";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#projects", id: "projects", label: "Work" },
@@ -94,15 +95,18 @@ export default function Nav() {
           ))}
         </ul>
 
-        {/* Mobile hamburger (<768px), 44px touch target */}
-        <button
-          type="button"
-          onClick={() => setOpen((o) => !o)}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline text-muted transition-colors hover:border-gold/50 hover:text-gold md:hidden"
-        >
+        {/* Theme toggle — visible on all sizes, left of the links / hamburger */}
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          {/* Mobile hamburger (<768px), 44px touch target */}
+          <button
+            type="button"
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline text-muted transition-colors hover:border-gold/50 hover:text-gold md:hidden"
+          >
           <span aria-hidden className="relative block h-3 w-4">
             <motion.span
               animate={open ? { y: 6, rotate: 45 } : { y: 0, rotate: 0 }}
@@ -120,7 +124,8 @@ export default function Nav() {
               className="absolute top-1.5 left-0 block h-px w-4 bg-current"
             />
           </span>
-        </button>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile slide-down panel */}
@@ -164,7 +169,7 @@ export default function Nav() {
                   href="/Eng_Sothy_CV.pdf"
                   download
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-center gap-2 rounded-full bg-gold py-3 text-sm font-semibold text-background transition-colors hover:bg-gold-hover"
+                  className="flex items-center justify-center gap-2 rounded-full bg-gold py-3 text-sm font-semibold text-gold-contrast transition-colors hover:bg-gold-hover"
                 >
                   Download CV
                 </a>

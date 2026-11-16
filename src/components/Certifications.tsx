@@ -65,7 +65,7 @@ export default function Certifications() {
               href={cert.verifyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full flex-col gap-3 rounded-2xl border border-hairline bg-surface p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:bg-elevated hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+              className="group flex h-full flex-col gap-3 rounded-2xl border border-hairline bg-surface p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:bg-elevated hover:shadow-[0_10px_30px_var(--shadow-color)]"
             >
               <HiOutlineAcademicCap className="h-6 w-6 text-gold/70" />
               <h3 className="text-sm font-semibold text-foreground">{cert.title}</h3>

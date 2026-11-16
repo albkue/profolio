@@ -40,6 +40,9 @@ export const metadata: Metadata = {
   },
 };
 
+/** Applies the stored theme before first paint (default: light). */
+const themeInitScript = `try{if(localStorage.getItem("theme")==="dark"){document.documentElement.dataset.theme="dark"}}catch(e){}`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,13 +51,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="light"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background font-sans text-foreground">
-        {/* Subtle film-grain texture over the whole page (4% opacity) */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Subtle film-grain texture over the whole page (per-theme opacity) */}
         <div
           aria-hidden
-          className="grain pointer-events-none fixed inset-0 z-[60] opacity-[0.035]"
+          className="grain pointer-events-none fixed inset-0 z-[60]"
+          style={{ opacity: "var(--grain-opacity)" }}
         />
         <MotionConfig reducedMotion="user">{children}</MotionConfig>
       </body>

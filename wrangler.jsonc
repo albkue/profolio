@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static-asset deployment for the exported Next.js site.
+  // The build (pnpm run build) outputs the static site to ./dist.
+  "name": "profolio",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

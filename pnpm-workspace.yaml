@@ -1,3 +1,6 @@
+packages:
+  - "."
+
+# Allow native build scripts for these dependencies (pnpm 10+ security default)
 allowBuilds:
   sharp: true
-# Allow native build scripts for these dependencies (pnpm 10+ security default)
